@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamcost by Fadida Junaedy</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ["primary-lime"]: '#d7da2f',
+                        ["primary-red"]: '#d73328',
+                        ["slate-100"]: '#e3f3fd',
+                        ["slate-300"]: '#9abed5',
+                        ["slate-500"]: '#6b94a8',
+                        ["slate-700"]: '#4e6e7e',
+                        ["slate-900"]: '#122f3f',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <main class="bg-slate-100">
+        <section class="w-full min-h-screen">
+            <div class="container min-h-screen flex justify-center items-center">
+                <div class="w-full bg-white grid grid-cols-1 lg:grid-cols-2 rounded-none lg:rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex flex-col gap-4 p-12">
+                        <h1 class="text-4xl font-semibold text-slate-900">DreamCost</h1>
+                        <form class="flex flex-col gap-4">
+                            <label 
+                            for="input-years"
+                            class="w-full flex flex-col gap-2">
+                                <span class="font-semibold text-slate-700">You want to achieve your dreams in</span>
+                                <div class="flex items-center border-2 border-slate-700 focus-within:border-primary-lime rounded-xl overflow-hidden">
+                                    <input 
+                                    id="input-years"
+                                    name="input-years"
+                                    type="text"
+                                    class="grow outline-none text-slate-900 font-semibold p-4 peer">
+                                    <div class="bg-slate-100 text-slate-700 flex justify-center items-center p-4">
+                                        years
+                                    </div>
+                                </div>
+                            </label>
+                            <label 
+                            for="input-current-price"
+                            class="w-full flex flex-col gap-2">
+                                <span class="font-semibold text-slate-700">Current Price</span>
+                                <div class="flex flex-row-reverse items-center border-2 border-slate-700 focus-within:border-primary-lime rounded-xl overflow-hidden">
+                                    <input 
+                                    id="input-current-price"
+                                    type="text"
+                                    name="input-current-price"
+                                    class="grow outline-none text-slate-900 font-semibold p-4 peer">
+                                    <select 
+                                    name="" 
+                                    id="input-select-currency"
+                                    class="bg-slate-100 text-slate-700 flex justify-center items-center p-4 outline-none">
+                                    </select>
+                                </div>
+                            </label>
+                            <label 
+                            for="input-down-payment"
+                            class="w-full flex flex-col gap-2">
+                                <span class="font-semibold text-slate-700">Down Payment</span>
+                                <div class="flex items-center border-2 border-slate-700 focus-within:border-primary-lime rounded-xl overflow-hidden">
+                                    <input 
+                                    id="input-down-payment"
+                                    type="text"
+                                    name="input-down-payment"
+                                    class="grow outline-none text-slate-900 font-semibold p-4 peer">
+                                    <div class="bg-slate-100 text-slate-700 flex justify-center items-center p-4">
+                                        %
+                                    </div>
+                                </div>
+                                <span class="text-sm text-slate-500">Input 100% if you want to pay in full</span>
+                            </label>
+                            <label 
+                            for="input-inflation-assumption"
+                            class="w-full flex flex-col gap-2">
+                                <span class="font-semibold text-slate-700">Inflation Assumption</span>
+                                <div class="flex items-center border-2 border-slate-700 focus-within:border-primary-lime rounded-xl overflow-hidden">
+                                    <input 
+                                    id="input-inflation-assumption"
+                                    type="text"
+                                    value="5"
+                                    name="input-inflation-assumption"
+                                    class="grow outline-none text-slate-900 font-semibold p-4 peer">
+                                    <div class="bg-slate-100 text-slate-700 flex justify-center items-center p-4">
+                                        %
+                                    </div>
+                                </div>
+                                <span class="text-sm text-slate-500">Inflation can be defined as a general and continuous increase of price of goods and services over periode of time.</span>
+                            </label>
+                            <button
+                            id="button-calculate"
+                            type="button"
+                            class="btn rounded-full transition-colors bg-primary-lime hover:bg-slate-300 text-slate-900 font-semibold flex justify-center items-center gap-2 py-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/>
+                                </svg>
+                                Calculate Dream
+                            </button>
+                            <button
+                            type="button"
+                            id="button-reset-calculate"
+                            class="underline text-slate-700">
+                                Clear All
+                            </button>
+                        </form>
+                    </div>
+                    <div id="result-container" class="bg-slate-700 rounded-none lg:rounded-bl-[3rem] p-12">
+                        <div class="h-full flex flex-col justify-center items-center gap-4">
+                            <img 
+                            src="./assets/images/illustration-empty.svg" 
+                            alt="Calculator Illustration" 
+                            class="max-w-xs mx-auto">
+                            <h2 class="text-center text-3xl font-semibold text-slate-100">Your Result shown here</h2>
+                            <p class="text-center text-slate-300">
+                                Complete the form and click "Calculate Dream" to see the price of your dream.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

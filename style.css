@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Plus Jakarta";
+    src: url("./assets/fonts/static/PlusJakartaSans-Medium.ttf") format('truetype'),
+         url("./assets/fonts/static/PlusJakartaSans-Bold.ttf") format('truetype'),
+         url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format('truetype'),
+         url("./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: "Plus Jakarta";
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
