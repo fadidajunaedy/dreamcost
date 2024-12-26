@@ -126,3 +126,5 @@ document.addEventListener("DOMContentLoaded", () => {
     formatInput(inputInflationAssumption)
 
 })
+
+console.log("Test, lagi belajar git")
