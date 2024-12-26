@@ -128,3 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 console.log("Test, lagi belajar git")
+
+const newFeature = () => {
+    return "wow"
+}
