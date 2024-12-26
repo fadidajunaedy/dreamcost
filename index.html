@@ -39,8 +39,10 @@
                                 <div class="flex items-center border-2 border-slate-700 focus-within:border-primary-lime rounded-xl overflow-hidden">
                                     <input 
                                     id="input-years"
-                                    name="input-years"
                                     type="text"
+                                    inputmode="numeric" 
+                                    pattern="[0-9]*"
+                                    name="input-years"
                                     class="grow outline-none text-slate-900 font-semibold p-4 peer">
                                     <div class="bg-slate-100 text-slate-700 flex justify-center items-center p-4">
                                         years
@@ -55,6 +57,8 @@
                                     <input 
                                     id="input-current-price"
                                     type="text"
+                                    inputmode="numeric" 
+                                    pattern="[0-9]*"
                                     name="input-current-price"
                                     class="grow outline-none text-slate-900 font-semibold p-4 peer">
                                     <select 
@@ -72,6 +76,8 @@
                                     <input 
                                     id="input-down-payment"
                                     type="text"
+                                    inputmode="numeric" 
+                                    pattern="[0-9]*"
                                     name="input-down-payment"
                                     class="grow outline-none text-slate-900 font-semibold p-4 peer">
                                     <div class="bg-slate-100 text-slate-700 flex justify-center items-center p-4">
@@ -88,6 +94,8 @@
                                     <input 
                                     id="input-inflation-assumption"
                                     type="text"
+                                    inputmode="numeric" 
+                                    pattern="[0-9]*"
                                     value="5"
                                     name="input-inflation-assumption"
                                     class="grow outline-none text-slate-900 font-semibold p-4 peer">
