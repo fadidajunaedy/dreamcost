@@ -39,6 +39,6 @@ No installation required, just go to the link above and enjoy the ease of your f
 
 Thank you for using **DreamCost**! We hope this tool helps you plan for the future by estimating the impact of inflation on the cost of items over time.
 
-If you have any feedback, suggestions, or encounter any issues, feel free to open an issue on our [GitHub repository](https://github.com/your-repository-link) or contact us.
+If you have any feedback, suggestions, or encounter any issues, feel free to open an issue on our [GitHub repository](https://github.com/fadidajunaedy/dreamcost) or contact us.
 
 Happy planning!
